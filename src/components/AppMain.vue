@@ -1,11 +1,12 @@
 <script>
 import store from '../data/store.js'
+import AppSubscribe from './AppSubscribe.vue';
 
 export default {
     name: "AppMain",
 
     components: {
-
+        AppSubscribe
     },
 
     data() {
@@ -26,7 +27,7 @@ export default {
 </script>
 
 <template>
-
+<AppSubscribe />
 </template>
 
 <style>
