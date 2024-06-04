@@ -34,7 +34,7 @@ export default {
     <div class="d-flex flex-wrap">
         <AppSingleCardMovie v-for="movie in store.films" :card="movie" style="width: 23rem; height: 30rem;" />
     </div>
-        <AppSingleCardNews style="width: 20rem; height: 20rem;" />
+        <AppSingleCardNews v-for="element in store.news" :card="element" style="width: 20rem; height: 20rem;" />
 
 <AppSubscribe />
 </template>

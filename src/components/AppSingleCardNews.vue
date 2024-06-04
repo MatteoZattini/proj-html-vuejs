@@ -19,8 +19,8 @@ export default {
     },
 
     methods: {
-        getImagePath: function(img) {
-                return new URL(`./assets/img/${img}`, import.meta.url).href;
+        getImage: function(img) {
+                return new URL(`../assets/img/${img}`, import.meta.url).href;
             }
     },
 
@@ -35,10 +35,10 @@ export default {
     <div class="card position-relative">
         <div class="filtro">
         </div>
-        <img class="object-fit-cover" src="../assets/img/8-rec.jpg" alt="">
-        <span class=" z-3 position-absolute top-0 end-0 hidden-top-right">ciao</span>
-        <span class=" z-3 position-absolute bottom-0 end-0 share">share</span>
-        <span class=" z-3 position-absolute bottom-0 start-0 details">details</span>
+        <img class="object-fit-cover" :src="getImage(card.img)" alt="">
+        <span class=" z-3 position-absolute top-0 end-0 hidden-top-right">{{ card.date }}</span>
+        <span class=" z-3 position-absolute bottom-0 end-0 share">Share</span>
+        <span class=" z-3 position-absolute bottom-0 start-0 details">Details</span>
         <div class="position-absolute bottom-0 end-0 socials d-flex justify-content-between">
             <div class="circle">
                 <i class="fa-brands fa-facebook-f"></i>
@@ -54,7 +54,7 @@ export default {
             </div>
         </div>
         <div class="z-3 info position-absolute top-50 start-50 translate-middle">
-            <h4>ciaone del deserto</h4>
+            <h4>{{ card.title }}</h4>
         </div>
     </div>
 </template>
