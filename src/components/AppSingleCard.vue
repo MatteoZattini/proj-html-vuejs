@@ -32,7 +32,7 @@ export default {
 <template>
     <div class="card position-relative">
         <img class="object-fit-cover" src="../assets/img/1-2-300x300.jpg" alt="">
-        <span class="position-absolute top-0 end-0">ciao</span>
+        <span class="position-absolute top-0 end-0 hidden">ciao</span>
         <span class="position-absolute top-0 start-0">ciao</span>
         <span class="position-absolute bottom-0 end-0"> ciao</span>
         <span class="position-absolute bottom-0 start-0"> ciao</span>
@@ -62,7 +62,15 @@ img:hover {
     
 }
 
-.card:hover {
+.card:hover .hidden {
+    margin-right: -20px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hidden {
+    margin-right: -145px;
     background: #13be13;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
 }
 </style>
