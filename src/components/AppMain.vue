@@ -1,13 +1,15 @@
 <script>
 import store from '../data/store.js'
 import AppSubscribe from './AppSubscribe.vue'
-import AppSingleCard from './AppSingleCard.vue'
+import AppSingleCardMovie from './AppSingleCardMovie.vue'
+import AppSingleCardNews from './AppSingleCardNews.vue'
 
 export default {
     name: "AppMain",
 
     components: {
-        AppSingleCard,
+        AppSingleCardMovie,
+        AppSingleCardNews,
         AppSubscribe,
     },
 
@@ -30,7 +32,8 @@ export default {
 
 <template>
     <!-- <div class="d-flex"> -->
-        <AppSingleCard v-for="element in store.footerLinks" style="width: 10rem; height: 10rem;" />
+        <AppSingleCardMovie style="width: 23rem; height: 30rem;" />
+        <AppSingleCardNews style="width: 23rem; height: 30rem;" />
 
     <!-- </div> -->
 <AppSubscribe />
