@@ -75,9 +75,9 @@ export default {
             </div>
             <div class="col-3">
                 <h4>{{ store.footerLinks[3].titolo }}</h4>
-                <div v-for="element in store.footerLinks[3].recent" class="d-flex mb-5">
+                <div v-for="element, i in store.footerLinks[3].recent" class="d-flex mb-5">
                     <div>
-                        <img class="recent-posts-img" src="" alt="">
+                        <img class="recent-posts-img" :src="store.footerLinks[3].recent.img_link" alt="">
                     </div>
                     <div class="recent-post-desc">
                         <div>
