@@ -33,7 +33,7 @@ export default {
 <template>
     <!-- <div class="d-flex"> -->
         <AppSingleCardMovie style="width: 23rem; height: 30rem;" />
-        <AppSingleCardNews style="width: 23rem; height: 30rem;" />
+        <AppSingleCardNews style="width: 20rem; height: 20rem;" />
 
     <!-- </div> -->
 <AppSubscribe />

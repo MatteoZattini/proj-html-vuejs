@@ -164,5 +164,13 @@ img {
     transition: 400ms; 
 }
 
+.details:hover {
+    background-color: #13be13;
+    transition: all 0.4s ease-in-out;
+}
 
+.views:hover {
+    background-color: #13be13;
+    transition: all 0.4s ease-in-out;
+}
 </style>
