@@ -1,12 +1,14 @@
 <script>
 import store from '../data/store.js'
-import AppSubscribe from './AppSubscribe.vue';
+import AppSubscribe from './AppSubscribe.vue'
+import AppSingleCard from './AppSingleCard.vue'
 
 export default {
     name: "AppMain",
 
     components: {
-        AppSubscribe
+        AppSingleCard,
+        AppSubscribe,
     },
 
     data() {
@@ -27,6 +29,10 @@ export default {
 </script>
 
 <template>
+    <!-- <div class="d-flex"> -->
+        <AppSingleCard v-for="element in store.footerLinks" style="width: 10rem; height: 10rem;" />
+
+    <!-- </div> -->
 <AppSubscribe />
 </template>
 

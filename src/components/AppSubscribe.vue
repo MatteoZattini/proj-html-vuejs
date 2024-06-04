@@ -28,14 +28,14 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-12 d-flex justify-content-around">
-                <div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="mx-5">
                     <input type="text" placeholder="first Name">
                 </div>
-                <div>
+                <div class="mx-5">
                     <input type="text" placeholder="Last Name">
                 </div>
-                <div>
+                <div class="mx-5">
                     <input type="text" placeholder="Email Address">
                 </div>
             </div>
@@ -53,15 +53,27 @@ export default {
 
 .container {
     width: 100%;
-    height: 20rem;
     background-color: #13be13;
+    padding: 5rem 0;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 input {
     background: none;
     border: 1px solid white; 
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 2.5rem;
     border-radius: 25px;
+    margin-bottom: 5rem;
+}
+
+button {
+    background: black;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: none;
+    border-style: solid;
 }
 
 ::placeholder {
