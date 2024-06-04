@@ -37,11 +37,9 @@ export default {
         </div>
         <img class="object-fit-cover" src="../assets/img/8-rec.jpg" alt="">
         <span class=" z-3 position-absolute top-0 end-0 hidden-top-right">ciao</span>
-        <div class="sharecont">
-            <span class=" z-3 position-absolute bottom-0 end-0 share">share</span>
-        </div>
+        <span class=" z-3 position-absolute bottom-0 end-0 share">share</span>
         <span class=" z-3 position-absolute bottom-0 start-0 details">details</span>
-        <div class=" z-3 position-absolute bottom-0 end-0 socials d-flex justify-content-between">
+        <div class="position-absolute bottom-0 end-0 socials d-flex justify-content-between">
             <div class="circle">
                 <i class="fa-brands fa-facebook-f"></i>
             </div>
@@ -130,10 +128,11 @@ img {
     z-index: 99;
 }
 
-.sharecont:hover ~ .socials {
+.share:hover ~ .socials {
     margin-right: -10px;
     transition: all 0.4s ease-in-out;
 }
+
 
 .details:hover {
     background-color: #13be13;
@@ -152,10 +151,7 @@ img {
     margin-right: 0.8rem;
 }
 
-.sharecont {
-    width: 100px;
-    height: 50px;
-}
+
 
 
 /* hover effects */

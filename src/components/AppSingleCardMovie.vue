@@ -19,8 +19,8 @@ export default {
     },
 
     methods: {
-        getImagePath: function(img) {
-                return new URL(`./assets/img/${img}`, import.meta.url).href;
+        getImage: function(img) {
+                return new URL(`../assets/img/${img}`, import.meta.url).href;
             }
     },
 
@@ -35,22 +35,23 @@ export default {
     <div class="card position-relative">
         <div class="filtro">
         </div>
-        <img class="object-fit-cover" src="../assets/img/8-rec.jpg" alt="">
-        <span class=" z-3 position-absolute top-0 end-0 hidden-top-right">ciao</span>
-        <span class=" z-3 position-absolute top-0 start-0 hidden-top-left">ciao</span>
-        <span class=" z-3 position-absolute bottom-0 end-0 views"> ciao</span>
-        <span class=" z-3 position-absolute bottom-0 start-0 details"> ciao</span>
+        <img class="object-fit-cover" :src="getImage(card.img_rec)" alt="">
+        <span class=" z-3 position-absolute top-0 end-0 hidden-top-right"><i class="fa-solid fa-star" style="color: #13be13;"></i> {{ card.rating }}/10</span>
+        <span class=" z-3 position-absolute top-0 start-0 hidden-top-left">{{ card.duration }}</span>
+        <span class=" z-3 position-absolute bottom-0 end-0 views">{{ card.views }} views</span>
+        <span class=" z-3 position-absolute bottom-0 start-0 details">Details</span>
         <span class="z-3 icon position-absolute top-50 start-50 translate-middle"><i class="fa-regular fa-circle-play"></i></span>
         <div class="z-3 info position-absolute top-50 start-50 translate-middle">
-            <h4>ciaone del deserto</h4>
+            <h4>{{ card.title }}</h4>
             <div>
-                <span style="line-height: 3rem;">category: top rating</span>
+                <span style="line-height: 3rem;">Category: {{ card.category }}</span>
             </div>
             <div>
-                <span style="line-height: 3rem;">category: top rating</span>
+                <span style="line-height: 3rem;">Release: {{ card.release }}</span>
             </div>
             <div>
-                <span style="line-height: 3rem;">category: top rating</span>
+                <span>Genre: </span>
+                <span v-for="genre in card.genre" style="line-height: 3rem; margin-right: 0.5rem;"> {{ genre }}</span>
             </div>
         </div>
     </div>
@@ -75,7 +76,6 @@ img {
 
 .hidden-top-right {
     margin-right: -145px;
-    background: #13be13;
     padding: 0.5rem 2rem;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;

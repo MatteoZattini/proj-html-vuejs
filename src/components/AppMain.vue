@@ -31,11 +31,11 @@ export default {
 </script>
 
 <template>
-    <!-- <div class="d-flex"> -->
-        <AppSingleCardMovie style="width: 23rem; height: 30rem;" />
+    <div class="d-flex flex-wrap">
+        <AppSingleCardMovie v-for="movie in store.films" :card="movie" style="width: 23rem; height: 30rem;" />
+    </div>
         <AppSingleCardNews style="width: 20rem; height: 20rem;" />
 
-    <!-- </div> -->
 <AppSubscribe />
 </template>
 
