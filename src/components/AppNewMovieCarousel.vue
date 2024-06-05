@@ -102,12 +102,13 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-                <div class="carousel-container d-flex flex-wrap flex-column justify-content-center">
+                <div class="carousel-container d-flex flex-wrap flex-column justify-content-center position-relative">
                     
-                         {{ this.myprevImg }} {{ this.activeImg }} {{ this.mynextImg }}
-                        <AppSingleCardMovie style="height: 550px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[myprevImg]" />
-                        <AppSingleCardMovie style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[activeImg]" />
-                        <AppSingleCardMovie style="height: 550px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[mynextImg]" />
+                        <div class="test"></div>
+                        <div class="test2"></div>
+                        <AppSingleCardMovie class="side-card" :card="store.films[myprevImg]" />
+                        <AppSingleCardMovie class="middle-card" :card="store.films[activeImg]" />
+                        <AppSingleCardMovie class="side-card" :card="store.films[mynextImg]" />
                     
                 </div>
             </div>
@@ -120,8 +121,40 @@ export default {
     color: white;
 }
 
+.test {
+    width: calc(100% / 3);
+    height: 100%;
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+}
+
+.test2 {
+    width: calc(100% / 3);
+    right: 0;
+    height: 100%;
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    opacity: 0;
+}
+
 .carousel-container {
     width: 100%;
     height: 660px;
+}
+
+.middle-card {
+    width: calc(100% / 3);
+    height: 600px;
+    border-radius: 20px;
+}
+
+.side-card {
+    width: calc(100% / 3);
+    height: 550px;
+    border-radius: 20px;
+    filter: opacity(0.3);
 }
 </style>
