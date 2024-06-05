@@ -55,7 +55,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="z-3 info position-absolute top-50 start-50 translate-middle">
+        <div class="z-3 info position-absolute">
             <h4>{{ card.title }}</h4>
         </div>
     </div>
@@ -113,10 +113,11 @@ img {
 }
 
 .info {
-    width: 300px;
-    
+    width: calc(100% - 4rem);
+    bottom: 5rem;
+    left: 1.5rem;
     /* border: 1px solid white; */
-    margin-top: 4rem;
+    /* margin-right: 4rem; */
     overflow: hidden;
 }
 

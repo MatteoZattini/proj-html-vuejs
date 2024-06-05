@@ -41,7 +41,7 @@ export default {
         <span class=" z-3 position-absolute bottom-0 end-0 views">{{ card.views }} views</span>
         <span class=" z-3 position-absolute bottom-0 start-0 details">Details</span>
         <span class="z-3 icon position-absolute top-50 start-50 translate-middle"><i class="fa-regular fa-circle-play"></i></span>
-        <div class="z-3 info position-absolute top-50 start-50 translate-middle">
+        <div class="z-3 info position-absolute">
             <h4>{{ card.title }}</h4>
             <div>
                 <span style="line-height: 3rem;">Category: {{ card.category }}</span>
@@ -51,7 +51,7 @@ export default {
             </div>
             <div>
                 <span>Genre: </span>
-                <span v-for="genre in card.genre" style="line-height: 3rem; margin-right: 0.5rem;"> {{ genre }}</span>
+                <span v-for="genre in card.genre" style="line-height: 2.5rem; margin-right: 0.5rem;"> {{ genre }}</span>
             </div>
         </div>
     </div>
@@ -120,10 +120,11 @@ img {
 }
 
 .info {
-    width: 300px;
+    width: calc(100% - 4rem);
     height: 100px;
+    bottom: 4.5rem;
+    left: 1.5rem;
     /* border: 1px solid white; */
-    margin-top: 6rem;
     overflow: hidden;
 }
 
@@ -160,7 +161,7 @@ img {
 
 .card:hover .info{
     overflow: none;
-    height: 200px;
+    height: 180px;
     transition: 400ms;
 }
 
