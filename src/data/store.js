@@ -185,7 +185,7 @@ const iMieiDati = reactive({
                 {
                     name: "Actor The Concept Movie High Concept Theory see",
                     date: "April 14, 2020",
-                    img_link: "../assets/img/9-rec.jpg",
+                    img_link: "news-1.jpg",
                 },
                 {
                     name: "consequat Nam lectus nibh aucibus It has turpis",

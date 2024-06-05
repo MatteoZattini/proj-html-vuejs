@@ -136,6 +136,11 @@ img {
     transition: all 0.4s ease-in-out;
 }
 
+.share-container:not(:hover) .socials {
+    margin-right: -245px;
+    transition: all 0.4s ease-in-out;
+}
+
 
 .details:hover {
     background-color: #13be13;
