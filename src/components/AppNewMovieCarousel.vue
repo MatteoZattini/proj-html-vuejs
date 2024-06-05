@@ -123,21 +123,23 @@ export default {
 
 .test {
     width: calc(100% / 3);
-    height: 100%;
+    height: 550px;
     z-index: 100;
-    background-color: white;
+    background: linear-gradient(321deg, rgba(6,15,25,1) 0%, rgba(6,15,25,1) 21%, rgba(0,212,255,0) 100%);
     position: absolute;
-    opacity: 0;
+    opacity: 1;
+    
 }
 
 .test2 {
     width: calc(100% / 3);
     right: 0;
-    height: 100%;
+    height: 550px;
     z-index: 100;
-    background-color: white;
+    background: linear-gradient(321deg, rgba(6,15,25,1) 0%, rgba(6,15,25,1) 21%, rgba(0,212,255,0) 100%);
+
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
 
 .carousel-container {
@@ -149,12 +151,14 @@ export default {
     width: calc(100% / 3);
     height: 600px;
     border-radius: 20px;
+    box-shadow: rgba(19, 190, 19, 0.4) 5px 5px, rgba(19, 190, 19, 0.3) 10px 10px, rgba(19, 190, 19, 0.2) 15px 15px, rgba(19, 190, 19, 0.1) 20px 20px, rgba(19, 190, 19, 0.05) 25px 25px;
+    z-index: 101;
 }
 
 .side-card {
     width: calc(100% / 3);
     height: 550px;
     border-radius: 20px;
-    filter: opacity(0.3);
+    filter: opacity(0.5);
 }
 </style>
