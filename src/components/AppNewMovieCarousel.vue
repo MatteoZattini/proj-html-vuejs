@@ -13,8 +13,8 @@ export default {
         return {
             store,
             activeImg: 0,
-            myprevImg: 9,
-            mynextImg: 0,
+            myprevImg: store.films.length - 1,
+            mynextImg: 1, 
         }
     },
 
@@ -25,22 +25,60 @@ export default {
         // },
 
         nextImg() {
-            if (this.activeImg == 8) {
+            if (this.activeImg == store.films.length - 2) {
+                this.activeImg = store.films.length - 1
+                this.myprevImg = store.films.length - 2
+                this.mynextImg = 0
+                console.log("porcodio 1")
+                
+            }
+            else if(this.activeImg == store.films.length - 1) {
                 this.activeImg = 0
-                console.log(store.films)
+                this.myprevImg = store.films.length - 1
+                this.mynextImg = 1
+                console.log("porcodio 2")
+
+            } 
+            else if (this.activeImg == 0) {
+                this.activeImg++ 
+                this.mynextImg++
+                this.myprevImg = 0
+                console.log("porcodio 3")
+                
             } else {
                 this.activeImg++
-                console.log(store.films)
+                this.mynextImg++
+                this.myprevImg++
+                console.log("porcodio 4")
             }
         },
 
         prevImg() {
-            if (this.activeImg == 0) {
-                this.activeImg = 8
+            if (this.activeImg == store.films.length - 1) {
+                this.myprevImg = store.films.length - 3
+                this.activeImg = store.films.length - 2
+                this.mynextImg = store.films.length - 1
+                
+                
+            } else if (this.activeImg == 1) {
+                this.myprevImg = store.films.length - 1
+                this.activeImg = 0
+                this.mynextImg = 1
+                
+                
+            }else if (this.activeImg == 0){
+                this.myprevImg = store.films.length - 2
+                this.activeImg = store.films.length - 1
+                this.mynextImg = 0
             } else {
                 this.activeImg--
+                this.mynextImg--
+                this.myprevImg--
+                
             }
-        }
+        },
+
+
     },
 
     mounted() {
@@ -64,13 +102,13 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-                <div class="carousel-container d-flex flex-wrap flex-column">
-                    <template v-for="movie, i in store.films">
-                        <!-- <AppSingleCardMovie style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" /> -->
-                        <AppSingleCardMovie v-show="myprevImg == activeImg - 1" style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                        <AppSingleCardMovie v-show="activeImg == i" style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                        <AppSingleCardMovie v-show="mynextImg == activeImg + 1" style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                    </template>
+                <div class="carousel-container d-flex flex-wrap flex-column justify-content-center">
+                    
+                         {{ this.myprevImg }} {{ this.activeImg }} {{ this.mynextImg }}
+                        <AppSingleCardMovie style="height: 550px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[myprevImg]" />
+                        <AppSingleCardMovie style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[activeImg]" />
+                        <AppSingleCardMovie style="height: 550px; width: calc(100% / 3); border-radius: 20px;" :card="store.films[mynextImg]" />
+                    
                 </div>
             </div>
         </div>
@@ -85,7 +123,5 @@ export default {
 .carousel-container {
     width: 100%;
     height: 660px;
-    border: 1px solid white;
-    overflow: hidden;
 }
 </style>
