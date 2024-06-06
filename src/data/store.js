@@ -228,16 +228,16 @@ const iMieiDati = reactive({
             titolo: "Shop",
             link: [
                 {
-                    titolo: "Shop Sidebar",
-                    link: [
+                    subtitolo: "Shop Sidebar",
+                    sublink: [
                         "Grid View",
                         "List View"
                     ],
                 },
 
                 {
-                    titolo: "No Sidebar",
-                    link: [
+                    subtitolo: "No Sidebar",
+                    sublink: [
                         "Grid View",
                         "List View"
                     ],

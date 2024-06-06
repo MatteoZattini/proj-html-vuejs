@@ -91,7 +91,7 @@ export default {
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li v-for="subLink in link.link">
                             <a class="dropdown-item" href="#">{{ subLink }}</a>
-                            <a class="dropdown-item" href="#">{{ subLink.titolo }}</a>
+                            <!-- <a class="dropdown-item" href="#">{{ subLink.titolo }}</a> -->
                         </li>
                     </ul>
                 </template>
