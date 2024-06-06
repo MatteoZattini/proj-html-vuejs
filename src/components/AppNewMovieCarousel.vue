@@ -97,8 +97,8 @@ export default {
                     <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
                 </div>
                 <div>
-                    <button @click="prevImg()">dietro</button>
-                    <button @click="nextImg()">avanti</button>
+                    <button @click="prevImg()"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                    <button @click="nextImg()"><i class="fa-solid fa-circle-chevron-right"></i></button>
                 </div>
             </div>
             <div class="col-12">
@@ -160,5 +160,22 @@ export default {
     height: 550px;
     border-radius: 20px;
     filter: opacity(0.5);
+}
+
+.fa-solid {
+    font-size: 2.5rem;
+}
+
+.fa-circle-chevron-left {
+    color: #13be13;
+}
+
+.fa-circle-chevron-right {
+    color: #13be13;
+}
+
+button {
+    background: none;
+    border: none;
 }
 </style>
