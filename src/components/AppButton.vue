@@ -1,9 +1,6 @@
 
-<template>
-    
-</template>
 
-<!-- <script>
+<script>
 import store from '../data/store.js'
 
 export default {
@@ -22,9 +19,7 @@ export default {
     },
 
     methods: {
-      
-      
-      
+        
     },
 
     mounted() {
@@ -70,4 +65,4 @@ export default {
     opacity: 1;
     z-index: 1000;
 }
-</style> -->
+</style>

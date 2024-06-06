@@ -152,6 +152,109 @@ const iMieiDati = reactive({
         },
     ],
 
+    newsClone: [
+        {
+            title: `Actor The Concept Movie High Concept Theory See The Post`,
+            date: `14/04/2024`,
+            img: `news-1.jpg`
+        },
+
+        {
+            title: `Consequat Nam Lectus Nibh Aucibus It Has Turpis`,
+            date: `14/04/2024`,
+            img: `news-2.jpg`
+        },
+
+        {
+            title: `Nam Lectus Nibh Consequat Aucibus Turpis It Has`,
+            date: `14/04/2024`,
+            img: `news-3.jpg`
+        },
+
+        {
+            title: `Bring Me The Head Of Alfredo Garcia Best Movie In`,
+            date: `14/04/2024`,
+            img: `news-4.jpg`
+        },
+
+        {
+            title: `Pump Action Interaction English Action Movie`,
+            date: `14/04/2024`,
+            img: `news-5.jpg`
+        },
+    ],
+
+    headerLinks: [
+        {
+            titolo: "Home",
+            link: [
+                "Home",
+                "Home1",
+                "Home2",
+                "Home3",
+                "Home4",
+                "Home5",
+                "Home6",
+            ]
+        },
+        {
+            titolo: "Celebrity",
+            link: [
+                "Celebrity Single",
+                "Celebrity",
+            ]
+        },
+        {
+            titolo: "Movie",
+            link: [
+                "Movie Post",
+                "Top Rate Movie",
+                "Movie Category",
+                "Single Movie",
+            ]
+        },
+        {
+            titolo: "Page",
+            link: [
+                "Princing Table",
+                "Call to Action",
+                "My Account",
+                "Cart",
+                "Checkout",
+                "Wishlist",
+            ]
+        },
+        {
+            titolo: "Shop",
+            link: [
+                {
+                    titolo: "Shop Sidebar",
+                    link: [
+                        "Grid View",
+                        "List View"
+                    ],
+                },
+
+                {
+                    titolo: "No Sidebar",
+                    link: [
+                        "Grid View",
+                        "List View"
+                    ],
+                }
+
+            ]
+        },
+    ],
+
+    searchLinks: [
+        "All Movie Category",
+        "Coming Soon",
+        "Latest Movie",
+        "Top Rating",
+        "TV Series",
+    ],
+
     footerLinks: [
         {
             titolo: "About Us",

@@ -29,27 +29,27 @@ export default {
                 this.activeImg = store.films.length - 1
                 this.myprevImg = store.films.length - 2
                 this.mynextImg = 0
-                console.log("porcodio 1")
+                
                 
             }
             else if(this.activeImg == store.films.length - 1) {
                 this.activeImg = 0
                 this.myprevImg = store.films.length - 1
                 this.mynextImg = 1
-                console.log("porcodio 2")
+                
 
             } 
             else if (this.activeImg == 0) {
                 this.activeImg++ 
                 this.mynextImg++
                 this.myprevImg = 0
-                console.log("porcodio 3")
+                
                 
             } else {
                 this.activeImg++
                 this.mynextImg++
                 this.myprevImg++
-                console.log("porcodio 4")
+                
             }
         },
 
@@ -178,4 +178,5 @@ button {
     background: none;
     border: none;
 }
+
 </style>
