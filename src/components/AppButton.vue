@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-<a class="to-top" href="#"><i class="fa-solid fa-chevron-up"></i></a>
+<a class="to-top" href="#elemento"><i class="fa-solid fa-chevron-up"></i></a>
 </template>
 
 <style scoped>
